@@ -1,0 +1,2 @@
+# yamb
+Yet Another MicroBlog
