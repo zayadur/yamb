@@ -1,2 +1,3 @@
-# yamb
-Yet Another MicroBlog
+# Yet Another Microblog
+
+A rendition of a microblogging platform.
