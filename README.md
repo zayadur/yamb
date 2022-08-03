@@ -11,11 +11,11 @@ Twitter authentication is handled by NextAuth.js.
 
 # Deployment
 
-## Local
+### Local
 `npm run dev` in `/` to launch local instance (default is localhost:3000)\
 `sanity start` in `/data` to start CMS dashboard (default is localhost:3333)
 
-## Remote
+### Remote
 Project and variables are hosted on Vercel by linking the GitHub repository and manual configuration via the dashboard.
 
 # Features
