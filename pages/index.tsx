@@ -40,6 +40,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       posts,
-    }
+    },
+    revalidate: 1,
   }
 }
