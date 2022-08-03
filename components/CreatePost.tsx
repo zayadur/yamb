@@ -59,7 +59,7 @@ function CreatePost({ setPosts }: Props) {
   }
 
   return (
-    <div className='flex p-5 space-x-2'>
+    <div className='flex p-5 space-x-2 border-b'>
       <div className='flex items-center flex-1 pl-2'>
         <form className='flex flex-col flex-1'>
           <input

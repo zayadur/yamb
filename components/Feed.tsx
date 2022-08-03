@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { RefreshIcon } from '@heroicons/react/outline'
-import toast from 'react-hot-toast'
 import CreatePost from './CreatePost'
 import { Post } from '../typings'
 import PostComponent from '../components/Post'
@@ -15,12 +14,8 @@ function Feed({ posts: postsProp }: Props) {
   const [posts, setPosts] = useState<Post[]>(postsProp)
 
   const handleRefresh = async () => {
-    const refreshToast = toast.loading("Refreshing...")
     const posts = await fetchPosts()
     setPosts(posts)
-    toast.success('Done!', {
-      id: refreshToast,
-    })
   }
 
   return (

@@ -1,6 +1,5 @@
 import { signIn, signOut, useSession } from 'next-auth/react'
 import {
-  CollectionIcon,
   LoginIcon,
   LogoutIcon,
   NewspaperIcon,
@@ -14,7 +13,6 @@ function Sidebar() {
   return (
     <div className='flex flex-col items-center col-span-2 px-4 md:items-start'>
       <SidebarRow Icon={NewspaperIcon} title='Your Feed' />
-      <SidebarRow Icon={CollectionIcon} title='Categories' />
       <SidebarRow Icon={session ? LogoutIcon : LoginIcon} onClick={ session ? signOut : signIn } title={ session ? 'Sign Out' : 'Sign In' } />
     </div>
   )
