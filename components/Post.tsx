@@ -53,8 +53,8 @@ function Post({ post }: Props) {
   }
 
   return (
-    <div>
-      <div className='flex flex-col p-5 space-x-3 border-gray-100 border-y'>
+    <div className='border-b'>
+      <div className='flex flex-col p-5 space-x-3'>
         <div className='flex space-x-3'>
           <div className='flex items-end space-x-1'>
             <p className='mr-1 font-bold'>{post.user}</p> ·
@@ -85,7 +85,7 @@ function Post({ post }: Props) {
         </div>
       </div>
       {commentBoxOpen && (
-        <form onSubmit={handleSubmit} className='flex m-3 space-x-3'>
+        <form onSubmit={handleSubmit} className='flex m-6 space-x-3'>
           <input
             value={input}
             onChange={e => setInput(e.target.value)}
@@ -103,10 +103,10 @@ function Post({ post }: Props) {
         </form>
       )}
       {comments?.length > 0 && (
-        <div className='p-5 my-2 space-y-5 overflow-y-scroll border-b max-h-44'>
+        <div className='p-5 my-2 ml-10 space-y-5 max-h-44'>
           {comments.map(comment => (
-            <div key={comment._id} className='flex flex-col space-x-2'>
-              <div>
+            <div key={comment._id} className='relative flex flex-col space-x-2'>
+              <hr className='absolute h-12 border-l border-black/30' />
                 <div className='flex space-x-1'>
                   <p className='mr-1 text-sm font-bold'>{comment.user}</p> ·
                   <TimeAgo
@@ -114,8 +114,7 @@ function Post({ post }: Props) {
                     date={comment._createdAt}
                   />
                 </div>
-              </div>
-              <p>{comment.comment}</p>
+              <p className='text-sm'>{comment.comment}</p>
             </div>
           ))}
         </div>
